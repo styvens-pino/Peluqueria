@@ -1,0 +1,210 @@
+/* Todo */
+* {
+    margin: 0px;
+    padding: 0%;
+    box-sizing: border-box;
+}
+/* Cuerpo */
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #ffff;
+    color: #111111;
+}
+/* Secciones */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Footer */
+
+footer {
+    background-color: #111111;
+    color: #ffffff;
+    text-align:center;
+    padding: 20px;
+    font-size:14px;
+
+}
+
+section.oscura {
+    background-color: #111111;
+    color: #ffffff;
+}
+
+/* Tipos de textos*/
+h1 {
+    font-size: 48px;
+    color: #FFD700;
+}
+h2 {
+    font-size: 32px;
+    color: #111111;
+}
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Etiquetas */
+
+header {
+    background-color: #111111;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #FFD700;
+}
+
+/* Boton Whatsapp Fijo */
+.boton-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    padding: 15px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 18px;
+    z-index: 999;
+}
+
+/*Galeria */
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:15px;
+    padding: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.foto img {
+    width: 100px;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;  
+}
+
+.foto img:hover {
+    transform: scale(1.05)
+}
+
+/* Para celular */
+@media (max-width: 768px) {.galeria-grid {
+    grid-template-columns: repeat(2. 1fr);
+    }
+}
+
+/*Celular columnas*/
+
+@media (max-width:480px) {.galeria-grid {
+    grid-template-columns: 1fr;
+    }
+    .foto img {
+        height:200px;
+    }
+}
+
+/*Tarjetas de servicios*/
+
+.subtitulo {
+    color: #888888;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+/* Cuadricula de texto */
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    padding:20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Tarjeta base */
+.tarjeta {
+    background-color: #111111;
+    color: #ffffff;
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+/* Levantar la tarjeta*/
+.tarjeta:hover {
+    transform: translateY(-10px);
+}
+
+/* Tarjeta combo*/
+.tarjeta.destacada {
+    background-color: #FFD700;
+    color: #111111;
+}
+
+/* Icono Grande*/
+.icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+/* Titulo de tarjeta*/
+.tarjeta h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Texto de tarjeta */
+
+.tarjeta p {
+    font-size: 14px;
+    color: #aaaaaa;
+    margin-bottom: 20px;
+}
+
+.precio {
+    font-size: 28px;
+    font-weight: bold;
+    color: #FFD700;
+
+}
+.tarjeta.destacada {
+    color: #555555;
+}
+.tarjeta.destacada .precio {
+    color: #111111;
+}
+
+/* Para celular */
+@media (max-width: 768px) {.sericios-grid {
+    grid-template-columns: repeat(2. 1fr);
+    }
+}
+
+/*Celular columnas*/
+
+@media (max-width:480px) {.servicios-grid {
+    grid-template-columns: 1fr;
+    }
+    .foto img {
+        height:200px;
+    }
+}
+
+
+/* FALTA ZONA DE CONTACOS CON HORARIOS*/
