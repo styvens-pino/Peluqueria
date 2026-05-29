@@ -206,5 +206,51 @@ nav a:hover {
     }
 }
 
+.contacto-grid {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+}
 
-/* FALTA ZONA DE CONTACOS CON HORARIOS*/
+.Info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.Info-icono {
+    font-size: 32px;
+}
+
+.Info-item h4{
+    font-size: 18px;
+    color: #FFD700;
+    margin-bottom: 5px;
+}
+.Info-item p{
+    font-size: 15px;
+    color: #555555;
+    margin: 2px 0;
+}
+
+.Mapa-container {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 20px rgb(0,0,0,0.15);
+}
+
+/* Celular */
+@media (max-whidt:768px) {
+    .contacto-grid {
+        grid-template-columns: 1fr;
+        order: -1;
+    }
+}
+
+
+/* FALTA SECCION HERO */
