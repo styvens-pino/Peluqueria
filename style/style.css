@@ -252,5 +252,71 @@ nav a:hover {
     }
 }
 
+/* Hero foto de fondo */
+#hero {
+    background-image: url('Corte_degradado.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
 
-/* FALTA SECCION HERO */
+/* Capa oscura encima de la foto */
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0,0.6);
+}
+
+/* Contenido encima de la capa */
+.hero-contenido {
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+}
+
+/* Titulo principal */
+
+.hero-contenido h1 {
+    font-size: 72px;
+    color: #FFD700;
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+}
+
+/* Subtitulo */
+
+.hero-subtitulo {
+    font-size: 22px;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Boton hero */
+.boton-hero:hover {
+    transform: scale(1.05)
+}
+
+/* En el celular */
+@media (max-width: 480px) {
+    .hero-contenido h1 {
+        font-size: 42px;
+    } .hero-subtitulo {
+        font-size: 16px;
+    } .boton-hero {
+        font-size: 16px;
+        padding: 14px 28px;
+    }
+}
