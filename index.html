@@ -3,122 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peluqueria Rodigrez: ¡Ven a buscar un nuevo estilo! </title>
+    <title>Peluquería Rodríguez: ¡Ven a buscar un nuevo estilo!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
     <header>
-        <h1 > Verse Bien Empiza con un nuevo corte</h1>
+        <a href="#hero" class="logo">Peluquería Rodríguez</a>
         <nav>
-            <a href="Servcios">Servicios</a >
-            <a href="Galeria">Galeria</a>
-            <a href="Contacto">Contactos</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#galeria">Galería</a>
+            <a href="#contacto">Contacto</a>
         </nav>
     </header>
     <section id="hero">
         <div class="hero-contenido">
-            <h1>Adueñate del Estilo</h1>
-            <p class="hero-subtitulo">Cortes modernos para marcar presencia</p>
-            <a href="https://wa.me/56912345678" class="boton-hero"> Reserva tu Estilo ahora </a>
+            <h1>Aduéñate del estilo</h1>
+            <p class="hero-subtitulo">Verse bien empieza con un nuevo corte. Cortes modernos para marcar presencia.</p>
+            <a href="https://wa.me/56912345678" class="boton-hero">Reserva tu estilo ahora</a>
         </div>
     </section>
     <section id="servicios">
-        <h2>Nuestros Servicios</h2>
+        <h2>Nuestros servicios</h2>
         <p class="subtitulo">Calidad y estilo para cada cliente</p>
         <div class="servicios-grid">
             <div class="tarjeta">
-                <div class="icon">✂️</div>
-                <h3>Corte clasico</h3>
+                <div class="icon" aria-hidden="true">✂️</div>
+                <h3>Corte clásico</h3>
                 <p>Corte tradicional adaptado a tu estilo</p>
                 <span class="precio">$5.000</span>
             </div>
             <div class="tarjeta">
-                <div class="icon">🪒</div>
+                <div class="icon" aria-hidden="true">🪒</div>
                 <h3>Barba</h3>
                 <p>Perfilado y arreglo de barba por completo</p>
                 <span class="precio">$3.000</span>
             </div>
             <div class="tarjeta destacada">
-                <div class="icon">🌟</div>
-                <h3>Corte + Barba </h3>
-                <p>El combo a el mejor precio</p>
+                <div class="icon" aria-hidden="true">🌟</div>
+                <h3>Corte + Barba</h3>
+                <p>El combo al mejor precio</p>
                 <span class="precio">$7.000</span>
             </div>
             <div class="tarjeta">
-                <div class="icon">💈</div>
+                <div class="icon" aria-hidden="true">💈</div>
                 <h3>Degradado</h3>
-                <p>Fade perfecto a maquina</p>
+                <p>Fade perfecto a máquina</p>
                 <span class="precio">$6.000</span>
             </div>
         </div>
-
     </section>
-    <section id="galeria">
-        <h2>Inspirate</h2>
-        <p>Texto de la galeria</p>
+    <section id="galeria" class="oscura">
+        <h2>Inspírate</h2>
+        <p class="subtitulo">Algunos de nuestros cortes favoritos</p>
         <div class="galeria-grid">
             <div class="foto">
-                <img src="img/Corte-Moderno.jpg" alt="Corte - Moderno">
+                <img src="img/Corte-Moderno.jpg" alt="Corte moderno">
             </div>
             <div class="foto">
-                <img src="img/Cortre-Con-Barba.jpg" alt="Corte - Corte con barba">
+                <img src="img/Cortre-Con-Barba.jpg" alt="Corte con barba">
             </div>
             <div class="foto">
-                <img src="img/Corte_degradado.jpg" alt="Corte - Degradado">
+                <img src="img/Corte_degradado.jpg" alt="Corte degradado">
             </div>
             <div class="foto">
-                <img src="img/Corte-clasico.jpg" alt="Corte - Corte clasico">
+                <img src="img/Corte-clasico.jpg" alt="Corte clásico">
             </div>
             <div class="foto">
-                <img src="img/Corte-EStilo-Urbano.jpg" alt="Corte - Estilo Urbano">
+                <img src="img/Corte-EStilo-Urbano.jpg" alt="Corte estilo urbano">
             </div>
             <div class="foto">
-                <img src="img/Corte-Barbar-Perfilada.jpg" alt="Corte - Barba Perfilada">
+                <img src="img/Corte-Barbar-Perfilada.jpg" alt="Barba perfilada">
             </div>
         </div>
     </section>
-    <section id="Contacto">
+    <section id="contacto">
         <h2>Contacta tu nuevo estilo</h2>
-        <p>Texto de contacto</p>
-        <div class="contanto-grid">
-            <div class="Info-contacto">
-                <div class="Infor-item">
-                    <span class="Info-icono">🕐</span>
+        <p class="subtitulo">Escríbenos o pasa a vernos, te esperamos</p>
+        <div class="contacto-grid">
+            <div class="info-contacto">
+                <div class="info-item">
+                    <span class="info-icono" aria-hidden="true">🕐</span>
                     <div>
                         <h4>Horario</h4>
                         <p>Lunes a viernes: 10:00 - 20:00</p>
-                        <p>sabado: 10:00 - 18:00</p>
-                        <p>Domingo: Cerrado</p>
+                        <p>Sábado: 10:00 - 18:00</p>
+                        <p>Domingo: cerrado</p>
                     </div>
                 </div>
-                <div class="Info-item">
-                    <span class="Info-icono">📱</span>
+                <div class="info-item">
+                    <span class="info-icono" aria-hidden="true">📱</span>
                     <div>
-                        <h4>Telefono</h4>
-                        <p>+56 9 1234 5678</p>
+                        <h4>Teléfono</h4>
+                        <p><a href="tel:+56912345678">+56 9 1234 5678</a></p>
                     </div>
                 </div>
-                <div class="Info-item">
-                    <span class="Info-icono">🎞️</span>
-                    <h4>Instagram</h4>
-                    <p>Escoge_estilo</p>
+                <div class="info-item">
+                    <span class="info-icono" aria-hidden="true">📷</span>
+                    <div>
+                        <h4>Instagram</h4>
+                        <p><a href="https://www.instagram.com/escoge_estilo/" target="_blank" rel="noopener">@escoge_estilo</a></p>
+                    </div>
                 </div>
             </div>
-            <a class=" boton-whatsapp" href="https://wa.me/56912345678">W</a>
-        </div>
-        <div class="Mapa-container">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.0!2d-70.6!3d-33.4"
-                whidt="100%"
-                height="400"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy">
-            </iframe>
+            <div class="mapa-container">
+                <!-- Cambia "Santiago, Chile" por la dirección real de la peluquería -->
+                <iframe
+                    title="Ubicación de Peluquería Rodríguez"
+                    src="https://www.google.com/maps?q=Santiago,+Chile&output=embed"
+                    width="100%"
+                    height="400"
+                    style="border:0;"
+                    allowfullscreen
+                    loading="lazy">
+                </iframe>
+            </div>
         </div>
     </section>
+    <a class="boton-whatsapp" href="https://wa.me/56912345678" aria-label="Escríbenos por WhatsApp">💬 WhatsApp</a>
     <footer>
-
+        <p>© 2026 Peluquería Rodríguez · Todos los derechos reservados</p>
     </footer>
 </body>
 </html>

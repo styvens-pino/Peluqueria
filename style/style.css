@@ -1,30 +1,26 @@
 /* Todo */
 * {
-    margin: 0px;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 /* Cuerpo */
 body {
     font-family: 'Oswald', sans-serif;
-    background-color: #ffff;
+    background-color: #ffffff;
     color: #111111;
 }
+
 /* Secciones */
 section {
     padding: 60px 20px;
     text-align: center;
-}
-
-/* Footer */
-
-footer {
-    background-color: #111111;
-    color: #ffffff;
-    text-align:center;
-    padding: 20px;
-    font-size:14px;
-
+    scroll-margin-top: 80px; /* para que el header no tape el título al usar el menú */
 }
 
 section.oscura {
@@ -32,28 +28,46 @@ section.oscura {
     color: #ffffff;
 }
 
-/* Tipos de textos*/
+section.oscura h2 {
+    color: #FFD700;
+}
+
+/* Tipos de textos */
 h1 {
     font-size: 48px;
     color: #FFD700;
 }
+
 h2 {
     font-size: 32px;
     color: #111111;
 }
+
 p {
     font-size: 16px;
     line-height: 1.6;
 }
 
-/* Etiquetas */
-
+/* Header */
 header {
     background-color: #111111;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: #FFD700;
+    text-decoration: none;
+    letter-spacing: 1px;
 }
 
 nav a {
@@ -67,72 +81,87 @@ nav a:hover {
     color: #FFD700;
 }
 
-/* Boton Whatsapp Fijo */
-.boton-whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25d366;
-    padding: 15px 20px;
-    border-radius: 50px;
+/* Hero foto de fondo */
+#hero {
+    background-image: url('../img/Corte_degradado.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+/* Capa oscura encima de la foto */
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Contenido encima de la capa */
+.hero-contenido {
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+}
+
+/* Título principal */
+.hero-contenido h1 {
+    font-size: 72px;
+    color: #FFD700;
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+}
+
+/* Subtítulo */
+.hero-subtitulo {
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 40px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Botón hero */
+.boton-hero {
+    display: inline-block;
+    background-color: #FFD700;
+    color: #111111;
+    font-size: 20px;
+    font-weight: 600;
     text-decoration: none;
-    font-size: 18px;
-    z-index: 999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 16px 36px;
+    border-radius: 50px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-/*Galeria */
-
-.galeria-grid {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap:15px;
-    padding: 30px;
-    max-width: 1000px;
-    margin: 0 auto;
+.boton-hero:hover {
+    transform: scale(1.05);
+    background-color: #ffffff;
 }
 
-.foto img {
-    width: 100px;
-    height: 250px;
-    object-fit: cover;
-    transition: transform 0.3s ease;  
-}
-
-.foto img:hover {
-    transform: scale(1.05)
-}
-
-/* Para celular */
-@media (max-width: 768px) {.galeria-grid {
-    grid-template-columns: repeat(2. 1fr);
-    }
-}
-
-/*Celular columnas*/
-
-@media (max-width:480px) {.galeria-grid {
-    grid-template-columns: 1fr;
-    }
-    .foto img {
-        height:200px;
-    }
-}
-
-/*Tarjetas de servicios*/
-
+/* Tarjetas de servicios */
 .subtitulo {
     color: #888888;
     margin-bottom: 40px;
     font-size: 18px;
 }
 
-/* Cuadricula de texto */
-
 .servicios-grid {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    padding:20px;
+    padding: 20px;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -146,31 +175,25 @@ nav a:hover {
     text-align: center;
     transition: transform 0.3s ease;
 }
-/* Levantar la tarjeta*/
+
+/* Levantar la tarjeta */
 .tarjeta:hover {
     transform: translateY(-10px);
 }
 
-/* Tarjeta combo*/
-.tarjeta.destacada {
-    background-color: #FFD700;
-    color: #111111;
-}
-
-/* Icono Grande*/
+/* Icono grande */
 .icon {
     font-size: 48px;
     margin-bottom: 15px;
 }
 
-/* Titulo de tarjeta*/
+/* Título de tarjeta */
 .tarjeta h3 {
     font-size: 20px;
     margin-bottom: 10px;
 }
 
 /* Texto de tarjeta */
-
 .tarjeta p {
     font-size: 14px;
     color: #aaaaaa;
@@ -181,142 +204,190 @@ nav a:hover {
     font-size: 28px;
     font-weight: bold;
     color: #FFD700;
-
 }
+
+/* Tarjeta combo */
 .tarjeta.destacada {
+    background-color: #FFD700;
+    color: #111111;
+}
+
+.tarjeta.destacada p {
     color: #555555;
 }
+
 .tarjeta.destacada .precio {
     color: #111111;
 }
 
-/* Para celular */
-@media (max-width: 768px) {.sericios-grid {
-    grid-template-columns: repeat(2. 1fr);
-    }
+/* Galería */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-/*Celular columnas*/
-
-@media (max-width:480px) {.servicios-grid {
-    grid-template-columns: 1fr;
-    }
-    .foto img {
-        height:200px;
-    }
+.foto {
+    overflow: hidden;
+    border-radius: 10px;
 }
 
+.foto img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.foto img:hover {
+    transform: scale(1.05);
+}
+
+/* Contacto */
 .contacto-grid {
-    display:grid;
+    display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
     text-align: left;
+    align-items: start;
 }
 
-.Info-item {
+.info-item {
     display: flex;
     align-items: flex-start;
     gap: 15px;
     margin-bottom: 30px;
 }
 
-.Info-icono {
+.info-icono {
     font-size: 32px;
 }
 
-.Info-item h4{
+.info-item h4 {
     font-size: 18px;
-    color: #FFD700;
+    color: #111111;
+    border-bottom: 3px solid #FFD700;
+    display: inline-block;
     margin-bottom: 5px;
 }
-.Info-item p{
+
+.info-item p {
     font-size: 15px;
     color: #555555;
     margin: 2px 0;
 }
 
-.Mapa-container {
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0px 4px 20px rgb(0,0,0,0.15);
+.info-item a {
+    color: #111111;
 }
 
-/* Celular */
-@media (max-whidt:768px) {
+.info-item a:hover {
+    color: #b8860b;
+}
+
+.mapa-container {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.mapa-container iframe {
+    display: block;
+}
+
+/* Botón WhatsApp fijo */
+.boton-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 15px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 18px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    z-index: 999;
+}
+
+.boton-whatsapp:hover {
+    background-color: #1ebe5b;
+}
+
+/* Footer */
+footer {
+    background-color: #111111;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+
+    .servicios-grid,
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .contacto-grid {
         grid-template-columns: 1fr;
-        order: -1;
+    }
+
+    .hero-contenido h1 {
+        font-size: 54px;
     }
 }
 
-/* Hero foto de fondo */
-#hero {
-    background-image: url('Corte_degradado.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-}
-
-/* Capa oscura encima de la foto */
-
-#hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0,0,0,0.6);
-}
-
-/* Contenido encima de la capa */
-.hero-contenido {
-    position: relative;
-    z-index: 1;
-    color: #ffffff;
-}
-
-/* Titulo principal */
-
-.hero-contenido h1 {
-    font-size: 72px;
-    color: #FFD700;
-    margin-bottom: 20px;
-    letter-spacing: 5px;
-}
-
-/* Subtitulo */
-
-.hero-subtitulo {
-    font-size: 22px;
-    color: #FFFFFF;
-    margin-bottom: 40px;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Boton hero */
-.boton-hero:hover {
-    transform: scale(1.05)
-}
-
-/* En el celular */
+/* Celular */
 @media (max-width: 480px) {
+    .logo {
+        font-size: 22px;
+    }
+
+    .servicios-grid,
+    .galeria-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .foto img {
+        height: 200px;
+    }
+
     .hero-contenido h1 {
         font-size: 42px;
-    } .hero-subtitulo {
+        letter-spacing: 2px;
+    }
+
+    .hero-subtitulo {
         font-size: 16px;
-    } .boton-hero {
+    }
+
+    .boton-hero {
         font-size: 16px;
         padding: 14px 28px;
+    }
+
+    .boton-whatsapp {
+        font-size: 16px;
+        padding: 12px 16px;
     }
 }
